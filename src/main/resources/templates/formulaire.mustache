@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="UTF-8" />		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<title>Exemple de template</title>
+	</head>
+
+	<body>	
+
+    <h1>Ajouter une ville</h1>
+		
+		<form method="POST" action="save"> 
+
+				<label for="id">ID:</label>
+				<input type="text" name="id" 
+					{{#city.id}} value="{{city.id}}" {{/city.id}}
+					readonly="readonly" placeholder="auto-généré, nom modifiable"/>
+				<label for="name">Nom:</label>
+				<input type="text" name="name" 
+					value="{{city.name}}" 
+					placeholder="Nom de la ville"/>	
+							
+				<label for="population">Population:</label>
+				<input type="number" name="population"
+					value="{{city.population}}" 
+					placeholder="Population de la ville"/>
+				<label for="country">Pays:</label>			
+				<select name="country"  id="countrySelector">
+					{{#countries}} {{! Une option par pays}}
+					<option value="{{id}}">{{name}}</option>
+					{{/countries}}
+				</select>
+				
+			<br>
+			<input type="submit" value="Enregistrer" /> <input type="reset" value="Réinitialiser" />
+        </form>	
+		
+		<hr/>
+		<a href="/cities/show">Retour au menu</a>
+		<a href="/cities/show">Retour au menu principal</a>
+		<hr/>
+
+	</body>
+</html>
+

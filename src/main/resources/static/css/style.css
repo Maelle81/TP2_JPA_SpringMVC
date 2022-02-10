@@ -61,6 +61,7 @@ select{
 	box-sizing:border-box;
 	background-color: #f2f2f2;	
 	border: solid 1px tan;
+	width: 100px;
 }
 
 textarea{

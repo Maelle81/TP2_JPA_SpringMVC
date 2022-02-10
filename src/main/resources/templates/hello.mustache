@@ -10,6 +10,24 @@
 <body>
 	<h1>Exemple</h1>
 	<h2>Hello {{message}} !</h2>
+	{{#cities}} {{! Pour chaque ville}}
+		Nom : {{name}}<br>
+	{{/cities}}
+
+	<form>
+		<label for="nom">Nom</label> : <input type="text" name="text" name="monNom" id="nom />
+		<br>
+		<label for="pays">Pays : </label>
+		<select name="pays" id="pays">
+			<option value="france"></option>
+			<option value="espagne">Espagne</option>
+		</select>	
+		<br>
+		<label for="nom">Population : </label> : <input type="text" name="text" name="monNom" id="nom />
+		
+	</form>
+
+	
 </body>
 
 </html>
